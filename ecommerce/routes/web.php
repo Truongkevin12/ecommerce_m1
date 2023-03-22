@@ -39,8 +39,7 @@ Route::group(['middleware' => ['roles', 'role:customer|admin|supervisor']], func
 });
 
 
-Auth::routes(['verify' => true]); // ['verify' => true] للتحقق من الاميل
-
+Auth::routes(['verify' => true]); // ['verify' => true]
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
 
     Route::group(['middleware' => 'guest'], function () {
